@@ -3,7 +3,9 @@ let kuaishou = {//快手快捷版
     run: function (runTimes) {
         toast('这是一个快手刷视频脚本,1s之后打开APP');
         sleep(1000);
-        var launchResult = app.launchApp("快手极速版");//app.launchApp("com.kuaishou.nebula");
+        // 我现在要刷的快手，把“快手极速版”改成了“快手”。
+        //var launchResult = app.launchApp("快手极速版");//app.launchApp("com.kuaishou.nebula");
+        var launchResult = app.launchApp("快手");//app.launchApp("com.smile.gifmaker");
         if (!launchResult) {
             toast('你还没有安装快手极速版！');
             sleep(1000)
@@ -408,18 +410,18 @@ var isRedmi = true
 function main() {
     home();
     sleep(3000);
-
+    var i = 1;
     while (i > 0) {
         kuaishou.run(100)//参数为每次循环刷动的次数
-        shuabao.run(100)//参数为每次循环刷动的次数
-        huoshan.run(100)//参数为每次循环刷动的次数
+        // douyin.run(100)//参数为每次循环刷动的次数
+        // shuabao.run(100)//参数为每次循环刷动的次数
+        // huoshan.run(100)//参数为每次循环刷动的次数
         //caidan.run(100)//参数为每次循环刷动的次数
         i--;
     }
-        douyin.run(10000)//参数为每次循环刷动的次数
-    qkk.open()//打开趣看看短视频
-        .article(50, 10)//阅读文章数，每篇文章滑动次数
-        .video(1000)//看的短视频数量
+        // qkk.open()//打开趣看看短视频
+        // .article(50, 10)//阅读文章数，每篇文章滑动次数
+        // .video(1000)//看的短视频数量
 };
 
 main();
