@@ -1,18 +1,7 @@
-var nameApp = "快手";
 var numVideo = 200;
 
 let autowatch_app = {
     run: function (runTimes) {
-        toast('这是一个刷视频脚本,1s之后打开APP');
-        sleep(1000);
-        var launchResult = app.launchApp(nameApp);
-        if (!launchResult) {
-            toast('找不到软件！');
-            sleep(1000)
-            return;
-        }
-        toast('等待软件打开，3s之后进入下个动作！');
-        sleep(3000);
         var sleepTime = 10;
         // 统计运行次数
         var flagTime = 0;
@@ -45,7 +34,6 @@ let autowatch_app = {
 
 function main() {
     home();
-    sleep(1500);
     autowatch_app.run(numVideo)//参数为每次循环刷动的次数
 };
 
